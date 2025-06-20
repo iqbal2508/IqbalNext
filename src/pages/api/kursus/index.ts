@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import clientPromise from '../../lib/mongodb';
+import clientPromise from '../../../lib/mongodb';
 
 // Definisikan tipe data untuk 1 item kursus
 type Kursus = {
