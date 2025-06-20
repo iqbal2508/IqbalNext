@@ -3,10 +3,10 @@ import clientPromise from '../../lib/mongodb';
 
 // Definisikan tipe data untuk 1 item kursus
 type Kursus = {
-  _id: string;         // MongoDB ObjectId dalam bentuk string
+  _id: string;
   nama: string;
   deskripsi: string;
-  // Tambahkan field lain sesuai isi koleksi 'kursus' kamu, misalnya:
+  // Tambahkan field lain jika ada, seperti:
   // harga: number;
   // durasi: string;
 };
@@ -15,7 +15,7 @@ type Kursus = {
 type ResponseData = {
   message: string;
   status: number;
-  data: Kursus[]; // Tidak lagi pakai `any`
+  data: Kursus[];
 };
 
 export default async function handler(
@@ -35,6 +35,7 @@ export default async function handler(
           message: 'Data berhasil diambil'
         });
       } catch (error) {
+        console.error("Error mengambil data kursus:", error); // fix untuk ESLint
         res.status(500).json({
           status: 500,
           data: [],
@@ -51,4 +52,4 @@ export default async function handler(
       });
   }
 }
-//UPdate
+//APAAAA
