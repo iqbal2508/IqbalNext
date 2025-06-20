@@ -7,7 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 const client = await clientPromise;
-  const db = client.db("elearning");
+  const db = client.db("elearningIqbal");
   switch (req.method) {
     case "GET":
       const kursus = await db.collection("kursus").find({
