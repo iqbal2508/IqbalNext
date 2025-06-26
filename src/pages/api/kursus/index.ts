@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import clientPromise from '../../../lib/mongodb';
-import { Content } from 'next/font/google';
-import { title } from 'process';
 
 // Definisikan tipe data untuk 1 item kursus
 
@@ -28,7 +26,7 @@ export default async function handler(
       res.json({
         status: 200, data: kursus,
         message: ''
-      });
+      }); 
       break;
     }
   }
